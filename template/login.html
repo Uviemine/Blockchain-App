@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h3><a href="index"><span>UVIE</span>WALLET</a></h3>
+		</div>
+		
+		<hr>
+
+		<h1>
+			Login Now
+		</h1>
+		{% for message in messages %}
+		<h4>{{message}}</h4>
+		{% endfor %}
+
+		<form method="POST">
+			{% csrf_token %}
+
+			<div class="layer1">
+				<div class="layer2">
+					<input type="text" name="username" placeholder="Enter Username" required>
+				</div>
+				<div class="layer2">
+					<input type="password" name="password" placeholder="Enter Password" required>
+				</div>
+				<input type="submit" class="submit">
+			</div>
+		</form>
+
+		<div class="create_account">
+			<p> 
+				Do not have an existing account? Create one <span><a href="register"><b>NOW</b></a></span>
+			</p>
+			<p> And get a Bitcoin wallet for FREE</p>
+		</div>
+	</div>
+	<div class="footer2">
+		&#169; Uviemine Collins Onobrakpeya Email: collinsonobrak@gmail.com Phone: +2347064731811 
+	</div>
+	
+</body>
+</html>

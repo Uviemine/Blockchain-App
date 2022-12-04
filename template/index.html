@@ -1,0 +1,129 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Uvie Bitcoin Wallet</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  
+</head>
+
+<body>
+ 
+	<div class="header">
+		<h3><a href="index"><span>UVIE</span>WALLET</a></h3>
+		{% if user.is_authenticated %}
+		<h2 class="welcome">Welcome, {{user.username}}</h2>
+		{% endif %}
+
+		<nav>
+			<ul>
+				<li><a href="register">Register</a></li>
+				<li><a href="help">Help</a></li>
+				{% if user.is_authenticated %}
+				<li><a href="logout">Logout</a></li>
+				{% else %}
+				<li><a href="login">Login</a></li>
+				{% endif %}
+			</ul>
+		</nav>
+	</div>
+	{% if user.is_authenticated %}
+	<h1>Your Bitcoin Address is:</h1>
+		<b id="btc_add">{{user.first_name}}</b>
+	
+	<div class="currency">
+		<ul>
+			<li><b>Currency:</b> USD $</li>
+			<li>
+				<form>
+					<input type="text" name="new_currency" placeholder="Enter any other currency">
+					<button type="submit" class="other_currency"><b>ENTER</b></button>
+				</form>
+			</li>
+		</ul>
+	</div>	
+
+	<div class="buy_or_sell">
+			<a href="#"><button type="button">Sell Bitcoin</button></a>
+			<a href="#"><button type="button">Buy Bitcoin</button></a>
+			<br>
+			<p> Click SUBMIT below to veiw the account details of <br><b id="btc_add2">{{user.first_name}}</b></p>
+		<form action="/" method="POST">
+			{% csrf_token %}
+			<input type="hidden" name="addr" value="{{user.first_name}}"><br>
+			<button type="submit" class="submit"><b>SUBMIT</b></button>
+		</form>
+	</div>	
+
+	<table>
+		<thead>
+			<tr>
+				<th rowspan="2"> &nbsp; </th>
+				<th rowspan="1">BTC</th>
+				<th rowspan="1">USD</th>
+				<th rowspan="1">{{other_currency}}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Transactions</td>
+				<td>{{detail.transactions}}</td>
+				<td>  </td>
+				<td>  </td>
+			</tr>
+			<tr>
+				<td>Total Received</td>
+				<td>{{detail.total_received}}</td>
+				<td>{{detail.total_received_usd}} USD</td>
+				<td>Other</td>
+			</tr>
+			<tr>
+				<td>Total Sent</td>
+				<td>{{detail.total_sent}}</td>
+				<td>{{detail.total_sent_usd}} USD</td>
+				<td>Other</td>
+			</tr>
+			<tr>
+				<td>Final Balance</td>
+				<td>{{detail.balance}}</td>
+				<td>{{detail.balance_usd}} USD</td>
+				<td>Other</td>
+			</tr>
+		</tbody>
+	</table>
+	{% endif %}
+	<div class="slider">
+		<figure>
+				<div> 
+					<img src="{% static 'images/Capture2.PNG' %}">
+					<p>
+						The<br><b>SECURITY</b><br>of your<br>transactions is<br>
+						<b>100% <br>GUARANTEED!</b></p> 
+				</div>
+				<div>
+					<img src="{% static 'images/Capture6.PNG' %}">
+					<p>Enjoy<br><b>massive<br> passive</b><br>income.<br>
+					<b>Fast<br>and Safe!</b></p>
+				</div>
+		</figure>
+	</div>
+
+	<div class="create_account">
+		<h2> Create an account<a href="register"> NOW</a></h2>
+		<p> And get a Bitcoin wallet for free</p>
+	</div>
+
+	<div class="footer1">
+		&#169; Uviemine Collins Onobrakpeya Email: collinsonobrak@gmail.com Phone: +2347064731811 
+	</div>
+
+
+</body>
+</html>

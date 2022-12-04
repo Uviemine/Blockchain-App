@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Register</title>
+	<link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h3><a href="index"><span>UVIE</span>WALLET</a></h3>
+		</div>
+
+		<h1>Register Below</h1>
+
+		{% for message in messages %}
+		<h4>{{message}}</h4>
+		{% endfor %}
+
+		<form method="POST" action="register">
+			{% csrf_token %}
+			
+			<div class="layer1">
+				<div class="layer2">
+					<input type="text" name="username" placeholder="Enter Username" required>
+				</div>
+
+				<div class="layer2">
+					<input type="text" name="email" placeholder="Enter Email" required>
+				</div>
+
+				<div class="layer2">
+					<input type="hidden" name="private_key" value="{{detail.private_key}}" readonly>
+								<span class="focus-input100"></span>
+				</div>
+							
+				<div class="layer2">
+					<input type="hidden" name="public_key" value="{{detail.public_key}}" readonly>
+								<span class="focus-input100"></span>
+				</div>
+
+				<div class="layer2">
+					<input type="hidden" name="address" value="{{detail.address}}" readonly>
+								<span class="focus-input100"></span>
+				</div>	
+									
+				<div class="layer2">
+					<input type="password" name="password" placeholder="Enter Password" required>
+				</div>
+				
+				<div class="layer2">
+					<input type="password" name="password2" placeholder="Repeat Password" required>
+				</div>
+				
+				<div class="submit">
+					<input type="submit">
+				</div>
+			</div>
+		</form>	
+		
+		<div class="create_account">
+			<p>Already have an account? <span><a href="login"><b>LOGIN</b></a></span></p>
+		</div>
+	</div>	
+		<div class="footer2">
+			&#169; Uviemine Collins Onobrakpeya Email: collinsonobrak@gmail.com Phone: +2347064731811 
+		</div>
+	
+</body>
+</html>
+

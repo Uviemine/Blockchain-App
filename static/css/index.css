@@ -1,0 +1,272 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+h3{
+	margin-left: 30px;
+	text-decoration: none;
+}
+
+.header h3 a{text-decoration: none;}
+h3 span {
+	background: saddlebrown;
+	border-radius: 5px;
+	padding: 3px;
+	color: white;
+}
+
+h2.welcome{
+	transform: translate(-50%, -50%);
+	margin-left:20vw;
+	margin-top:30px;
+	margin-bottom:0
+}
+
+.header{
+	display: inline-flex;
+	border-bottom: 1px solid black;
+	width: 100%;
+}
+
+.header nav{
+	margin-left: auto;
+	margin-right: 40px;
+}
+
+.header nav ul{
+	display: inline-flex;
+}
+
+.header nav ul li{
+	padding-left: 20px;
+	list-style: none;
+	padding-right: 13px;
+	border-left:1px solid black;
+}
+
+.header nav ul li:first-child{
+	border-left: none;
+}
+	
+
+.header nav ul li a{
+	text-decoration: none;
+	color: black;
+}
+
+.header nav ul li:hover{
+	background-color: saddlebrown;
+	color: white;
+	border-radius: 5px;
+}
+
+.header nav ul li a:hover{
+	color: white;
+}
+
+h1{
+	text-align: center;
+}
+
+.currency, .buy_or_sell{
+	margin-left: 35%;
+}
+
+.currency li {
+	list-style: none;
+	margin-top: 5px;
+}
+
+li .other_currency{
+	background-color: grey;
+	border-radius: 3px;
+	width: 70px;
+	padding: 3px;
+	color: black;
+}
+
+button, .submit{
+	border-radius: 15px;
+	width: 150px;
+	margin: 5px;
+	border-style: none;
+	text-align: center;
+	padding: 10px;
+	background-color: saddlebrown;
+	color: white;
+}
+
+.submit	{
+	margin-left: 13%;
+	margin-top: 30px;
+	color: white;
+}
+
+.sales ul{
+	list-style: none;
+	display: block;
+	border-top:1px thin black;
+}
+
+.sales>ul>li{
+	display: inline-flex;
+}
+
+.sales #inner1{
+	width: 37%;
+}
+
+.sales #inner2{
+	width: 20%;
+}
+
+table{
+	width: 100%;
+	padding-left: 5px;
+	margin-top: 20px;
+}
+
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	border-right: none;
+}
+
+td{
+	text-align: center;
+}
+
+td:first-child{
+	text-align: left;
+	padding-left: 20px;
+}
+
+th{
+	background-color: saddlebrown;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #fff;
+}
+
+tr:nth-child(odd){
+	background-color: #ddd;
+}
+
+.slider{
+	background-color: purple;
+	margin-top: 0px;
+	padding-top: 0px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.slider figure{
+	position: relative;
+	width: 300%;
+	left: 0;
+	margin: 0;
+	animation: 10s slider infinite;
+}
+
+.slider figure div img{
+	width: 20%;
+	float: left;
+}
+
+.slider figure div p{
+	width: 20%;
+	float: left;
+	color: white;
+	font-size: 30px;
+	font-style: italic;
+	padding-top: 70px;
+	padding-left: 15px;
+}
+
+@media (max-width: 750px){
+	.slider figure div p{
+		font-size: 20px;
+}
+}
+
+@media (max-width: 600px){
+	.slider figure div p{
+		font-size: 20px;
+		padding-left: 5px;}
+}
+
+
+@keyframes slider{
+	0%{
+		left: 0;
+	}
+	48%{
+		left: 0;
+	}
+	50%{
+		left: -123%;
+	}
+	98%{
+		left: -123%;
+	}
+	100%{
+		left: -200%;
+	}
+}
+
+.btc_logo p{
+	color: white;
+	font-size: 50px;
+	justify-content: center;
+	margin-top: 150px;
+}
+
+img{
+	padding: 30px 20px 10px;
+}
+
+.create_account{
+	text-align: center;
+	font-size: large;
+}
+
+.create_account a{
+	text-decoration: none;
+	color: purple;
+}
+
+.create_account a:hover{
+	color: white;
+	background-color: purple;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.push{
+	text-align: center;
+}
+
+.footer1{
+	background-color: purple;
+	font-size: 13px;
+	color: white;
+	padding: 12px;
+	text-align: center;
+}
+
+b#btc_add {
+    margin-left: 30%;
+    color: purple;
+    font-size: x-large;
+}
+
+b#btc_add2{
+	margin-top: 10px;
+    color: purple;
+    font-size: large;
+}
+

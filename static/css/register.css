@@ -1,0 +1,102 @@
+html, body{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	text-align: center;
+}
+h3{
+	margin-left: 30px;
+	text-decoration: none;
+	}
+
+.header h3 a{
+	text-decoration: none;
+}
+
+.header{
+	display: inline-flex;
+	border-bottom: 1px solid black;
+	width: 100%;
+}
+
+h3 span{
+	background: saddlebrown;
+	color: white;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+.layer2 input {
+    padding: 1px 2px;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.layer2{
+	margin: 30px;
+	text-align: center;
+}
+
+.layer1{
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 400px;
+    transform: translate(-50%, -50%);
+    margin-left: 50%;
+    margin-top: 240px;
+}
+
+
+
+input[type="submit" i] {
+    padding: 13px;
+    background-color: purple;
+    color: white;
+    border: none;
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 11px;
+}
+
+.create_account{
+	margin-top:-230px;
+	padding-top:0px;
+	font-size: 16px
+}
+
+.create_account a{
+	text-decoration: none;
+}
+
+.create_account span{
+	font-size:x-large;
+}
+
+.footer2{
+	background-color: purple;
+	font-size: 13px;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	margin-top:140px
+}
+
+.container{
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+}
+
+.h4{
+    font-size: 15px;
+    font-weight: 100;
+    color: red;
+    margin-right: 16rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
